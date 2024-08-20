@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <section className="container">
-          <Tasks />
+          <Tasks tasks={tasks}/>
       </section>
     </>
   );
