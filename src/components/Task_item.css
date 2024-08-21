@@ -1,19 +1,25 @@
+:root {
+  --primary-color: chartreuse;
+  --text-color: #eee;
+  --fundo-color: #444;
+}
+
 .task-container {
-  background-color: #444;
+  background-color: var(--fundo-color);
   margin: 8px 0;
   padding: 15px 20px;
   display: flex;
   border-radius: 5px;
   justify-content: space-between;
-  color: #eee;
+  color: var(--text-color);
   align-items: center;
 }
 .task-title {
   cursor: pointer;
 }
 .remove-task-button {
-  color: chartreuse;
-  background-color: #444;
+  color: var(--primary-color);
+  background-color: var(--fundo-color);
   border: none;
   font-size: 24px;
   cursor: pointer;

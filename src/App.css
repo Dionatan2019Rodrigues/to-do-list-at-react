@@ -1,6 +1,6 @@
 :root{
     --primary-color: chartreuse;
-    --text-color: white;
+    --text-color: #eee;
 }
 
 .container{
