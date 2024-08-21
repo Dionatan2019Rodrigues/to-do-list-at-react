@@ -1,0 +1,22 @@
+:root{
+    --primary-color: chartreuse;
+    --fundo-color: #444;
+    --text-color: #eee;
+}
+.task-details-container{
+    background-color: var(--fundo-color);
+    margin: 15px 0;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    border-radius: 5px;
+}
+.task-details-container h2{
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+.back-button-container{
+    width: 30%;
+    margin-top: 10px;
+}

@@ -6,6 +6,7 @@ import "./App.css";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
+import TaskDetails from "./components/TaskDetails";
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -68,6 +69,7 @@ const App = () => {
             );
           }}
         />
+        <Route path="/:taskTitle" exact component={TaskDetails} />
       </section>
     </Router>
   );
