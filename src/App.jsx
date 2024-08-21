@@ -28,6 +28,12 @@ const App = () => {
     setTasks(newTasks);
   };
 
+  const handleTaskDelete = (idTask) => {
+    const newTasks = tasks.filter((task) => task.id != idTask);
+
+    setTasks(newTasks);
+  };
+
   const handleTaskAdddition = (taskTitle) => {
     const newTasks = [
       ...tasks,
@@ -44,7 +50,11 @@ const App = () => {
     <>
       <section className="container">
         <AddTask handleTaskAdddition={handleTaskAdddition} />
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
+        <Tasks
+          tasks={tasks}
+          handleTaskClick={handleTaskClick}
+          handleTaskDelete={handleTaskDelete}
+        />
       </section>
     </>
   );
