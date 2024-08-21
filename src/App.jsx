@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Tasks from "./components/Tasks";
@@ -52,24 +52,26 @@ const App = () => {
   return (
     <Router>
       <section className="container">
-        <Route
-          path="/"
-          exact
-          render={() => {
-            return (
-              <>
-                <Header>Minhas Tarefas</Header>
-                <AddTask handleTaskAdddition={handleTaskAdddition} />
-                <Tasks
-                  tasks={tasks}
-                  handleTaskClick={handleTaskClick}
-                  handleTaskDelete={handleTaskDelete}
-                />
-              </>
-            );
-          }}
-        />
-        <Route path="/:taskTitle" exact component={TaskDetails} />
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={() => {
+              return (
+                <>
+                  <Header>Minhas Tarefas</Header>
+                  <AddTask handleTaskAdddition={handleTaskAdddition} />
+                  <Tasks
+                    tasks={tasks}
+                    handleTaskClick={handleTaskClick}
+                    handleTaskDelete={handleTaskDelete}
+                  />
+                </>
+              );
+            }}
+          />
+          <Route path="/:taskTitle" exact component={TaskDetails} />
+        </Switch>
       </section>
     </Router>
   );
