@@ -49,6 +49,7 @@ const App = () => {
   };
 
   const handleTaskAdddition = (taskTitle) => {
+    if (taskTitle != "") {
       const newTasks = [
         ...tasks,
         {
@@ -58,6 +59,7 @@ const App = () => {
         },
       ];
       setTasks(newTasks);
+    }
   };
 
   return (
